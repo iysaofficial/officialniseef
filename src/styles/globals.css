@@ -1,0 +1,398 @@
+@import url(css/style.css);
+/* @import url(css/style.min.css); */
+@import url(css/templete.css);
+/* @import url(css/templete.min.css); */
+@import url(css/coming-soon.css);
+/* @import url(css/plugins.css); */
+@import url(css/star-rating-svg.css);
+@import url(css/skin/skin-1.css);
+
+
+/* @import url(css/skin/color/skin-1.css);
+@import url(css/skin/color/skin-2.css);
+@import url(css/skin/color/skin-3.css);
+@import url(css/skin/color/skin-4.css);
+@import url(css/skin/color/skin-5.css);
+@import url(css/skin/color/skin-6.css);
+@import url(css/skin/color/skin-7.css);
+@import url(css/skin/color/skin-8.css);
+@import url(css/skin/color/skin-9.css); */
+
+
+
+:root{
+  --warna-primary: #1a73a8;
+  --warna-sekunder: #293e92;
+  --warna-tulisan: #333;
+  --warna-tulisan2: #fff;
+  --font-family: "Titillium Web", sans-serif; 
+}
+
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--warna-primary);
+  background-image: linear-gradient(to right, #5ca9fb 0%, #293e92 100%);
+  padding: 14px 34px;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+  border: 0;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom.active {
+  color: #fff;
+  background-image: none;
+  background-color: var(--warna-primary);
+}
+
+.categories-item {
+  display: flex;
+  flex-wrap: wrap; /* Agar item bisa membungkus ke baris berikutnya jika tidak muat */
+  gap: 20px; /* Spasi antar item */
+  justify-content: space-around;
+}
+
+.box-item-service {
+  flex: 1 1 auto; /* Flex item yang bisa tumbuh dan menyusut */
+  max-width: calc(100% / 3 - 20px); /* Menyediakan 3 item per baris dengan gap */
+}
+
+@media (max-width: 768px) {
+  .box-item-service {
+    max-width: calc(100% / 2 - 20px); /* 2 item per baris pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .box-item-service {
+    max-width: 100%; /* 1 item per baris pada layar sangat kecil */
+  }
+}
+
+
+
+/* PAGE HEADER START */
+/* PAGE HEADER START */
+.page-header{
+  padding: 150px 25px 75px 25px;
+  background: #0f1706;
+  text-align: center;
+  align-content: center;
+}
+.page-header h1{
+  color: var(--warna-tulisan2);
+}
+.page-header a{
+  color: var(--warna-tulisan2);
+  text-decoration: none;
+}
+
+.page-header a:hover{
+  color: var(--warna-primary);
+  text-decoration: none;
+}
+
+.page-header .divider{
+  width: 100% !important;
+  position: absolute;
+  pointer-events: none;
+  background: var(--warna-tulisan2);
+  mask-size: 100%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+}
+
+.page-header ul{
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.page-header ul li {
+  color: var(--warna-tulisan2);
+  display: inline-block;
+  position: relative;
+  opacity: .9;
+  margin-left: 15px;
+}
+
+.page-header ul .titik::before{
+  border-radius: 50%;
+  background-color: var(--warna-tulisan2);
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  content: "";
+  right: -12px;
+  transform: translate(-50%);
+  top: 45%;
+}
+
+/* PAGE HEADER END */
+/* PAGE HEADER END */
+
+
+/* HOMEREGIST START */
+/* HOMEREGIST START */
+.homeregist-section {
+  padding: 75px 25px 75px 25px  ;
+  height: 100vh;
+  background: var(--warna-tulisan2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* HOMEREGIST END */
+/* HOMEREGIST END */
+
+/* REGISTRATION START */
+/* REGISTRATION START */
+.registration-section {
+padding: 10rem 25px 75px 25px  ;
+background: var(--warna-tulisan2);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.registration-section .container .title {
+font-size: 25px;
+font-weight: 500;
+position: relative;
+}
+.registration-section .container .title::before {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 30px;
+border-radius: 5px;
+}
+.registration-section .content form .user-details {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 50px 0 20px 0;
+}
+
+.registration-section .content form .user-details p{
+  margin: 0;
+  color: var(--warna-tulisan);
+  font-size: 12px;
+}
+.registration-section form .user-details .input-box {
+margin-bottom: 30px;
+width: calc(100% / 2 - 20px);
+color: var(--warna-primary);
+font-size: clamp(14px, 2vw, 24px);  ;
+}
+.registration-section form .input-box span.details {
+display: block;
+font-weight: 500;
+margin-bottom: 5px;
+}
+
+.registration-section .form-label{
+color: var(--warna-tulisan);
+font-size: clamp(16px, 2vw, 24px);
+}
+.registration-section .gam{
+display: flex;
+}
+
+.registration-section .user-details .input-box input {
+height: 45px;
+width: 100%;
+outline: none;
+font-size: 16px;
+border-radius: 5px;
+padding-left: 15px;
+border: 1px solid var(--warna-primary);
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+
+.registration-section .user-details .input-box select {
+height: 45px;
+width: 100%;
+outline: none;
+font-size: 16px;
+border-radius: 5px;
+padding-left: 15px;
+border: 1px solid var(--warna-primary);
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+
+.registration-section .user-details .input-box p {
+font-size: 11px;
+}
+
+.registration-section .container .content .sub {
+font-weight: bold;
+font-size: clamp(30px, 4vw, 50px);
+}
+
+.registration-section .garis-bawah::after {
+position: absolute;
+content: '';
+background: var(--warna-primary);
+height: 4px;
+width: 50%;
+left: 10%;
+transform: translateX(-50%);
+}
+
+.registration-section .user-details .input-box textarea {
+height: 80px;
+width: 100%;
+outline: none;
+font-size: 16px;
+border-radius: 5px;
+padding-left: 15px;
+border: 1px solid var(--warna-primary);
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+}
+.registration-section .user-details .input-box input:focus,
+.registration-section .user-details .input-box input:valid {
+border-color: #6f42c1;
+}
+
+.registration-section .user-details .input-box textarea:focus,
+.registration-section .user-details .input-box textarea:valid {
+border-color: #6f42c1;
+}
+
+.registration-section .user-details .input-box select:focus,
+.registration-section .user-details .input-box select:valid {
+border-color: #6f42c1;
+}
+
+.registration-section form .gender-details .gender-title {
+font-size: 20px;
+font-weight: 500;
+}
+.registration-section form .category {
+display: flex;
+width: 80%;
+margin: 14px 0;
+justify-content: space-between;
+}
+.registration-section form .category label {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.registration-section form .button {
+height: 45px;
+margin: 35px 0;
+}
+.registration-section form .button input {
+height: 100%;
+width: 100%;
+border-radius: 5px;
+border: none;
+color: var(--warna-tulisan2);
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: var(--warna-primary);
+}
+
+.registration-section form .buttonindo input {
+height: 100%;
+width: 100%;
+border-radius: 5px;
+border: none;
+color: var(--warna-tulisan2);
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: var(--warna-primary);
+display: none;
+}
+
+.registration-section form .button input:hover{
+  box-shadow: 12px 12px #262521;
+  background-color: var(--warna-sekunder) !important;
+  border-color: #262521;
+  transition: .3s;
+}
+.registration-section form .buttonindo input:hover{
+  box-shadow: 12px 12px #262521;
+  background-color: var(--warna-sekunder) !important;
+  border-color: #262521;
+  transition: .3s;
+}
+
+
+@media (max-width: 426px) {
+.registration-section form .user-details .input-box {
+  margin-bottom: 15px;
+  width: 200%;
+  color: var(--warna-tulisan);
+}
+.registration-section form .category {
+  width: 200%;
+}
+.registration-section .content form .user-details {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.registration-section .user-details::-webkit-scrollbar {
+  width: 5px;
+}
+.registration-section .container .content .con {
+  width: 23rem;
+  height: 60px;
+}
+}
+
+/* REGISTRATION END */
+/* REGISTRATION END */
+
+.sticky-header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sticky-header.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Hitam dengan opacity 0.8 */
+  top: 0px;
+}
+
+.customLightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customLightboxContent {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
