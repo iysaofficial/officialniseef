@@ -80,7 +80,7 @@ const Header = () => {
                 </li>
                 <li>
                   <i className="fas fa-globe m-r5"></i>
-                  Official Website
+                  Situs Web Resmi
                 </li>
                 <li>
                   <i className="fas fa-envelope m-r5"></i>

@@ -9,9 +9,9 @@ function HomeRegist() {
       {/* PAGE HEADER START */}
       <div className="page-header text-center">
         <div className="divider"></div>
-        <h1>Registration</h1>
+        <h1>Pendaftaran</h1>
         <Link href="/" legacyBehavior>
-          <a>Home</a>
+          <a>Utama</a>
         </Link>
       </div>
       {/* PAGE HEADER END */}
@@ -19,25 +19,25 @@ function HomeRegist() {
         <div>
           <div className="wrapper">
             <div className="text-center">
-              <h1 className="mx-auto">REGISTRATION FORM</h1>
+              <h1 className="mx-auto">FORMULIR PENDAFTARAN</h1>
               <h3 className="mx-auto mt-5 mb-2">
-                Choose Categories Participant for Registration AISEEF 2025
+                Pilih Kategori Peserta untuk Pendaftaran NISEEF 2025
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
             <Link href="/registration/indonesiaparticipants" legacyBehavior>
               <a className="btn btn-custom text-center me-lg-5">
-                Indonesia Participant{" "}
+               Peserta Indonesia{" "}
                 <i className="fa-solid fa-earth-americas"></i>
-              </a>
+              </a>  
             </Link>
-            <Link href="/registration/internationalparticipants" legacyBehavior>
+            {/* <Link href="/registration/internationalparticipants" legacyBehavior>
               <a className="btn btn-custom text-center me-lg-5">
-              International Participant{" "}
+                International Participant{" "}
                 <i className="fa-solid fa-earth-americas"></i>
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

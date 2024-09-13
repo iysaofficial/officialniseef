@@ -100,9 +100,9 @@ export default function Home() {
               <div className="container">
                 <div className="section-head text-black text-center">
                   <h2 className="box-title m-tb0">
-                    Categories <span className="bg-primary"></span>
+                    Kategori <span className="bg-primary"></span>
                   </h2>
-                  <p>Which categories for joining with us?</p>
+                  <p>Kategori mana yang bisa bergabung dengan kami?</p>
                 </div>
               </div>
               <div className="development-box">

@@ -22,7 +22,7 @@ function IndoensiaParticipants() {
 
   const generateUniqueId = () => {
     const timestamp = new Date().getTime();
-    return `AISEEF${timestamp}`;
+    return `NISEEF${timestamp}`;
   };
 
   const generateFormData = (
@@ -70,9 +70,9 @@ function IndoensiaParticipants() {
 
   const generatePaymentLink = async () => {
     if (
-      selectedCategory !== "AISEEF Online Competition" &&
-      selectedCategory !== "AISEEF Offline Competition" &&
-      selectedCategory !== "AISEEF Offline + Excursion"
+      selectedCategory !== "NISEEF Online Competition" &&
+      selectedCategory !== "NISEEF Offline Competition" &&
+      selectedCategory !== "NISEEF Offline + Excursion"
     ) {
       alert("Anda harus memilih salah satu kategori.");
       return;
@@ -167,11 +167,11 @@ function IndoensiaParticipants() {
   };
 
   useEffect(() => {
-    if (selectedCategory === "AISEEF Online Competition") {
+    if (selectedCategory === "NISEEF Online Competition") {
       setPrice("100000");
-    } else if (selectedCategory === "AISEEF Offline Competition") {
+    } else if (selectedCategory === "NISEEF Offline Competition") {
       setPrice("200000");
-    } else if (selectedCategory === "AISEEF Offline + Excursion") {
+    } else if (selectedCategory === "NISEEF Offline + Excursion") {
       setPrice("500000");
     } else {
       setPrice("");
@@ -185,7 +185,7 @@ function IndoensiaParticipants() {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzmJFF_At7dHbSksEFc11YzcrwCqx8XsP2ui2UHtdESpW9MNXGwXaTUFeSxDvq1aRBa/exec";
+      "https://script.google.com/macros/s/AKfycbycVZkI5qZOfV3p5gJkvXT1dXc7u9Kodbk8UHm7souyTTn7-OO6u00G341ixBJgiD2G/exec";
     const form = document.forms["regist-form"];
 
     if (form) {
@@ -204,7 +204,7 @@ function IndoensiaParticipants() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzmJFF_At7dHbSksEFc11YzcrwCqx8XsP2ui2UHtdESpW9MNXGwXaTUFeSxDvq1aRBa/exec";
+      "https://script.google.com/macros/s/AKfycbycVZkI5qZOfV3p5gJkvXT1dXc7u9Kodbk8UHm7souyTTn7-OO6u00G341ixBJgiD2G/exec";
       
       const form = document.forms["regist-form"];
       var buttonCounter = 0;
@@ -254,7 +254,7 @@ function IndoensiaParticipants() {
           <a>Halaman Sebelumnya</a>
         </Link>
       </div>
-      {/* PAGE HEADER END */}
+      {/* PAGE HEADER END */} 
       <section className="registration-section">
         <div className="container">
           <div className="content">
@@ -262,7 +262,7 @@ function IndoensiaParticipants() {
             <h1 className="garis-bawah"></h1>
             <br></br>
             <h4>
-              HALLO PESERTA AISEEF 2025, Mohon perhatikan informasi berikut ini
+              HALLO PESERTA NISEEF 2025, Mohon perhatikan informasi berikut ini
               sebelum mengisi formulir pendaftaran :
             </h4>
             <br />
@@ -587,13 +587,13 @@ function IndoensiaParticipants() {
                     value={selectedCategory}
                   >
                     <option value="">--Pilih Kategori Kompetisi--</option>
-                    <option value="AISEEF Online Competition">
+                    <option value="NISEEF Online Competition">
                       Kompetisi Online
                     </option>
-                    <option value="AISEEF Offline Competition">
+                    <option value="NISEEF Offline Competition">
                       Kompetisi Offline
                     </option>
-                    <option value="AISEEF Offline + Excursion">
+                    <option value="NISEEF Offline + Excursion">
                       Kompetisi Offline + Excursion
                     </option>
                   </select>
@@ -606,9 +606,9 @@ function IndoensiaParticipants() {
                     className="btn btn-custom"
                     onClick={(e) => generatePaymentLink(e)}
                     disabled={
-                      selectedCategory !== "AISEEF Online Competition" &&
-                      selectedCategory !== "AISEEF Offline Competition" &&
-                      selectedCategory !== "AISEEF Offline + Excursion"
+                      selectedCategory !== "NISEEF Online Competition" &&
+                      selectedCategory !== "NISEEF Offline Competition" &&
+                      selectedCategory !== "NISEEF Offline + Excursion"
                     }
                   >
                     Buat Tautan Pembayaran
@@ -789,7 +789,7 @@ function IndoensiaParticipants() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    Sumber Informasi Kompetisi AISEEF 2025
+                    Sumber Informasi Kompetisi NISEEF 2025
                   </label>
                   <select
                     type="text"
@@ -801,16 +801,16 @@ function IndoensiaParticipants() {
                   >
                     <option value="">--Pilih Sumber Informasi--</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
-                    <option value="AISEEF Instagram">AISEEF Instagram</option>
+                    <option value="NISEEF Instagram">NISEEF Instagram</option>
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
                     <option value="IYSA FaceBook">IYSA FaceBook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
-                    <option value="AISEEF Website">AISEEF Website</option>
+                    <option value="NISEEF Website">NISEEF Website</option>
                     <option value="IYSA Email">IYSA Email</option>
-                    <option value="AISEEF Email">AISEEF Email</option>
+                    <option value="NISEEF Email">NISEEF Email</option>
                     <option value="Acara Sebelumnya">Acara Sebelumnya</option>
                     <option value="Lainnya">Lainnya</option>
                   </select>

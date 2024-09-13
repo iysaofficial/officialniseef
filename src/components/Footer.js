@@ -14,9 +14,7 @@ class Footer extends Component {
                   <div className="widget widget_services border-0">
                     <ul>
                       <li>
-                        <Link href="/registration/homeregist">
-                          Registration
-                        </Link>
+                        <Link href="/registration/homeregist">Pendaftaran</Link>
                       </li>
                       {/* <li>
                         <Link href="/#Testimonial">Testimonials</Link>
@@ -58,11 +56,11 @@ class Footer extends Component {
                         <i className="fas fa-envelope"></i>
                         <strong>email</strong>
                         <a
-                          href="mailto:aseaninnovative.aisef@gmail.com"
+                          href="mailto:nationalinnovative.nisef@gmail.com"
                           rel="noreferrer noopener"
                           target="_blank"
                         >
-                          natioanlinnovative.nisef@gmail.com
+                          nationalinnovative.nisef@gmail.com
                         </a>
                       </li>
                     </ul>
@@ -71,13 +69,13 @@ class Footer extends Component {
                 <div className="col-lg-4 col-md-6 col-sm-6 footer-col-4 ">
                   <div className="widget">
                     <h5 className="m-b30 text-white">
-                    Berlangganan Sosial Kami Untuk Mengikuti
+                      Berlangganan Sosial Kami Untuk Mengikuti
                     </h5>
                     <p className="text-capitalize m-b20">
-                      &quot;Innovation&quot; is a must in today&apos;s modern
-                      era. This simple word demands a huge result within
-                      creating a new works which is called
-                      &quot;Invention&quot;.
+                      “Inovasi” adalah suatu keharusan di era modern saat ini
+                      era. Kata yang sederhana ini menuntut hasil yang sangat
+                      besar dalam menciptakan sebuah karya baru yang disebut
+                      “Penemuan” atau ‘Invention’.
                     </p>
 
                     <ul className="list-inline m-a0">
@@ -130,7 +128,7 @@ class Footer extends Component {
                     <ul>
                       <li>
                         <span>
-                          Made <i className="ti-heart"></i>
+                          <i className="ti-heart"></i>
                           <a href="https://www.iysa.or.id"> IYSA IT</a>
                         </span>
                       </li>
