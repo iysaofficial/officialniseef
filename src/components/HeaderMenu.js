@@ -55,7 +55,7 @@ const HeaderMenu = () => {
         </li> */}
 
         {/* PAGES */}
-        <li>
+        {/* <li>
           <a
             href="https://drive.google.com/file/d/1Us15HwkNMaQxWyuC0FKeSDGjIUGuERrd/view?usp=sharing"
             target="_blank"
@@ -64,7 +64,7 @@ const HeaderMenu = () => {
           >
             Buku Panduan
           </a>
-        </li>
+        </li> */}
         <li>
           {/* <Link href="#">
             About AISEEF <i className="fa fa-chevron-down"></i>{' '}

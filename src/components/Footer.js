@@ -6,7 +6,7 @@ class Footer extends Component {
     const currentYear = new Date().getFullYear();
     return (
       <>
-        <footer className="site-footer text-uppercase">
+        <footer className="site-footer ">
           <div className="footer-top">
             <div className="container">
               <div className="row">
@@ -50,6 +50,14 @@ class Footer extends Component {
                           target="_blank"
                         >
                           +62 817-7091-4129
+                        </a>
+                      <br/>
+                        <a
+                          href="https://wa.me/6288213248890"
+                          rel="noreferrer noopener"
+                          target="_blank"
+                        >
+                          +62 882-1324-8890
                         </a>
                       </li>
                       <li>

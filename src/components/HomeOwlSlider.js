@@ -97,14 +97,14 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a> */}
-              <Link href="/registration/homeregist" legacyBehavior>
+              {/* <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
                   Segera Hadir 2025
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -134,14 +134,14 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a> */}
-              <Link href="/registration/homeregist" legacyBehavior>
+              {/* <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
                   Segera Hadir 2025
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -171,14 +171,14 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a> */}
-              <Link href="/registration/homeregist" legacyBehavior>
+              {/* <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
                   Segera Hadir 2025
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

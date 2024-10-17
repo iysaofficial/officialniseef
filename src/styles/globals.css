@@ -8,21 +8,10 @@
 @import url(css/skin/skin-1.css);
 
 
-/* @import url(css/skin/color/skin-1.css);
-@import url(css/skin/color/skin-2.css);
-@import url(css/skin/color/skin-3.css);
-@import url(css/skin/color/skin-4.css);
-@import url(css/skin/color/skin-5.css);
-@import url(css/skin/color/skin-6.css);
-@import url(css/skin/color/skin-7.css);
-@import url(css/skin/color/skin-8.css);
-@import url(css/skin/color/skin-9.css); */
-
-
 
 :root{
   --warna-primary: #1a73a8;
-  --warna-sekunder: #293e92;
+  --warna-sekunder: #292929;
   --warna-tulisan: #333;
   --warna-tulisan2: #fff;
   --font-family: "Titillium Web", sans-serif; 
