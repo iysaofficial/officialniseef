@@ -85,26 +85,27 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Segera Hadir 2025</b>
+                <a>Open Registrasi NISEEF 2025</a>
                 <br />
               </h2>
 
-              {/* <a
-                href="https://youtu.be/iUgvM_VA1U8"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a> */}
-              {/* <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Segera Hadir 2025
+                  Registrasi disini!!
                 </a>
-              </Link> */}
+              </Link>
+              <Link href="" legacyBehavior> 
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className="site-button m-r10 white button-lg"
+                >
+                  GUIDE BOOK
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -122,26 +123,27 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Segera Hadir 2025</b>
+                <a>Open Registrasi NISEEF 2025</a>
                 <br />
               </h2>
 
-              {/* <a
-                href="https://youtu.be/iUgvM_VA1U8"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a> */}
-              {/* <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Segera Hadir 2025
+                  Registrasi disini!!
                 </a>
-              </Link> */}
+              </Link>
+              <Link href="" legacyBehavior> 
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className="site-button m-r10 white button-lg"
+                >
+                  GUIDE BOOK
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -159,26 +161,27 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Segera Hadir 2025</b>
+                <a>Open Registrasi NISEEF 2025</a>
                 <br />
               </h2>
 
-              {/* <a
-                href="https://youtu.be/iUgvM_VA1U8"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a> */}
-              {/* <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Segera Hadir 2025
+                  Registrasi disini!!
                 </a>
-              </Link> */}
+              </Link>
+              <Link href="" legacyBehavior> 
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  className="site-button m-r10 white button-lg"
+                >
+                  GUIDE BOOK
+                </a>
+              </Link>
             </div>
           </div>
         </div>
