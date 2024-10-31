@@ -72,11 +72,15 @@ const Header = () => {
               <ul>
                 <li>
                   <i className="fas fa-phone-alt m-r5"></i>
+                  +62 882-1324-8890
+                </li>
+                <li>
+                  <i className="fas fa-phone-alt m-r5"></i>
                   +62 817-7091-4129
                 </li>
                 <li>
                   <i className="fas fa-map-marker-alt m-r5"></i>
-                  Jl. Kemang No. 63 RT 03 RW 06 Kp. Kekupu
+                  Jl. Kemang RT 03 RW 06 Kp. Kekupu
                 </li>
                 <li>
                   <i className="fas fa-globe m-r5"></i>
@@ -84,7 +88,7 @@ const Header = () => {
                 </li>
                 <li>
                   <i className="fas fa-envelope m-r5"></i>
-                  nationalinnovative.nisef@gmail.com
+                  niseef.iysa@gmail.com
                 </li>
               </ul>
             </div>

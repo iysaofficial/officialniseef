@@ -17,6 +17,10 @@
   --font-family: "Titillium Web", sans-serif; 
 }
 
+.sm-font {
+text-transform: lowercase !important;
+}
+
 .btn-custom {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
