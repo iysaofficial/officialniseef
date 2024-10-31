@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const HeaderMenu = () => {
   return (
@@ -7,6 +7,16 @@ const HeaderMenu = () => {
         <li>
           <Link href="/" rel="noreferrer noopener" className="dez-page">
             Beranda
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="dez-page"
+          >
+            Guide Book
           </Link>
         </li>
 
