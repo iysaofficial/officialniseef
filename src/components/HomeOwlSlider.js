@@ -97,7 +97,7 @@ const HomeOwlSlider = () => {
                   Registrasi disini!!
                 </a>
               </Link>
-              <Link href="" legacyBehavior> 
+              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
@@ -135,7 +135,7 @@ const HomeOwlSlider = () => {
                   Registrasi disini!!
                 </a>
               </Link>
-              <Link href="" legacyBehavior> 
+              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
@@ -173,7 +173,7 @@ const HomeOwlSlider = () => {
                   Registrasi disini!!
                 </a>
               </Link>
-              <Link href="" legacyBehavior> 
+              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
