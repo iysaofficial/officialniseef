@@ -83,7 +83,7 @@ function IndoensiaParticipants() {
             <br />
             <br />
             <h4>
-              HALLO PESERTA GYIIF 2025, Mohon perhatikan informasi berikut ini
+              HALLO PESERTA NISEEF 2025, Mohon perhatikan informasi berikut ini
               sebelum mengisi formulir pendaftaran :
             </h4>
             <br />
@@ -521,7 +521,7 @@ function IndoensiaParticipants() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    Sumber Informasi Kompetisi GYIIF 2025
+                    Sumber Informasi Kompetisi NISEEF 2025
                   </label>
                   <select
                     type="text"
@@ -533,16 +533,16 @@ function IndoensiaParticipants() {
                   >
                     <option value="">--Pilih Sumber Informasi--</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
-                    <option value="GYIIF Instagram">GYIIF Instagram</option>
+                    <option value="NISEEF Instagram">NISEEF Instagram</option>
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
                     <option value="IYSA FaceBook">IYSA FaceBook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
-                    <option value="GYIIF Website">GYIIF Website</option>
+                    <option value="NISEEF Website">NISEEF Website</option>
                     <option value="IYSA Email">IYSA Email</option>
-                    <option value="GYIIF Email">GYIIF Email</option>
+                    <option value="NISEEF Email">NISEEF Email</option>
                     <option value="Acara Sebelumnya">Acara Sebelumnya</option>
                     <option value="Lainnya">Lainnya</option>
                   </select>
