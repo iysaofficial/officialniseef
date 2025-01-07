@@ -123,16 +123,16 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <a>Open Registrasi NISEEF 2025</a>
+                <a>Tutup Pendataran NISEEF 2025</a>
                 <br />
               </h2>
 
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Registrasi disini!!
+                  Tutup Pendaftaran!!
                 </a>
               </Link>
               <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
@@ -161,16 +161,16 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <a>Open Registrasi NISEEF 2025</a>
+                <a>Tutup Pendataran NISEEF 2025</a>
                 <br />
               </h2>
 
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Registrasi disini!!
+                  Tutup Pendaftaran!!
                 </a>
               </Link>
               <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
