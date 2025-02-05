@@ -19,6 +19,16 @@ const HeaderMenu = () => {
             Guide Book
           </Link>
         </li>
+        <li>
+          <Link
+            href="https://drive.google.com/drive/folders/1ircNMSRvFbZS3L2SEG-xtW79uLZd3QwI?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="dez-page"
+          >
+            Sertifikat Supervisor 2025
+          </Link>
+        </li>
 
         {/* <li>
           <Link href="/LoW/lowtahun">
