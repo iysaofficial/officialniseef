@@ -10,6 +10,11 @@ const HeaderMenu = () => {
           </Link>
         </li>
         <li>
+          <Link href="/Faq" rel="noreferrer noopener" className="dez-page">
+            FAQ
+          </Link>
+        </li>
+        <li>
           <Link
             href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
             target="_blank"

@@ -3,10 +3,9 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTitle from "@/components/PageTitle";
-
 const bnr1 = "/assets/images/banner/bnr4.jpg";
 
-const lowtahun = () => {
+const kategori = () => {
   return (
     <>
       <Header />
@@ -22,52 +21,40 @@ const lowtahun = () => {
 
         <div class="container page">
           <div className="text-center">
-            <h3>Select by the year of the event you are participating in</h3>
+            <h3>
+              Choose based on the Category of the event you are participating in
+            </h3>
           </div>
           <div className=" wrapper-btn text-center">
-          <Link href="/LoW/2025/kategori" legacyBehavior>
+            <Link
+              href="https://drive.google.com/file/d/1AFiLU02ce3vFSOdhYjMxp5ooOXynCem6/view?usp=sharing"
+              legacyBehavior
+            >
               <a
+                target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                2025{" "}
+                Special Award{" "}
               </a>
             </Link>
-            {/* <Link href="/LoW/2024/kategori" legacyBehavior>
+            <Link href="/LoW/2025/offline2025" legacyBehavior>
               <a
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                2024{" "}
+                NISEEF OFFLINE{" "}
               </a>
-            </Link> */}
-
-            {/* <Link
-              href="https://drive.google.com/file/d/1yDfiFMAUrV8GKDapO9iwGMsm6dRnLWB5/view?usp=sharing"
-              legacyBehavior
-            >
+            </Link>
+            {/* <Link href="/LoW/2025/online2025" legacyBehavior>
               <a
-                target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                2023{" "}
-              </a>
-            </Link> */}
-            {/* <Link
-              href="https://drive.google.com/file/d/1qXpDh4KdiyINGBL7nQFxZNFIa9OL-7k0/view?usp=sharing"
-              legacyBehavior
-            >
-              <a
-                target="_blank"
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2022{" "}
+                NISEEF ONLINE{" "}
               </a>
             </Link> */}
           </div>
@@ -78,4 +65,4 @@ const lowtahun = () => {
   );
 };
 
-export default lowtahun;
+export default kategori;
