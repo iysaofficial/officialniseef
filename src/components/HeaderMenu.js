@@ -10,8 +10,8 @@ const HeaderMenu = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Faq" rel="noreferrer noopener" className="dez-page">
-            FAQ
+          <Link href="/LoW/lowtahun">
+            List Of Winners
           </Link>
         </li>
         <li>
