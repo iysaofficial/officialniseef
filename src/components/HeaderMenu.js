@@ -40,22 +40,22 @@ const HeaderMenu = () => {
             List Of Winners
           </Link>
         </li> */}
-        {/* <li>
+        <li>
           <Link href="#">
-            Curation <i className="fa fa-chevron-down"></i>{' '}
+            Press Release <i className="fa fa-chevron-down"></i>{' '}
           </Link>
           <ul className="sub-menu left">
             <li>
               <a
-                href="https://drive.google.com/drive/folders/1rD-txCe9HIgiw52Vm5Zq1uFfxTuNm0Yx?usp=drive_link"
+                href="https://drive.google.com/file/d/1kSuGCVFkieMQPlqMEWeIijz1Pqa1g5GJ/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Curation 2024
+                Press Release 2025
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
                 target="_blank"
@@ -64,8 +64,8 @@ const HeaderMenu = () => {
               >
                 Curation 2023
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a
                 href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
                 target="_blank"
@@ -74,8 +74,8 @@ const HeaderMenu = () => {
               >
                 Curation 2022
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a
                 href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
                 target="_blank"
@@ -84,9 +84,56 @@ const HeaderMenu = () => {
               >
                 Curation 2021
               </a>
-            </li>
+            </li> */}
           </ul>
-        </li> */}
+        </li>
+        <li>
+          <Link href="#">
+            Gallery<i className="fa fa-chevron-down"></i>{' '}
+          </Link>
+          <ul className="sub-menu left">
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1fSkCJeQTkbOF5zUA7Le1-rNrdhY_nULc?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Gallery 2025
+              </a>
+            </li>
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2023
+              </a>
+            </li> */}
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2022
+              </a>
+            </li> */}
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2021
+              </a>
+            </li> */}
+          </ul>
+        </li>
         <li>
           <Link href="/Faq" rel="noreferrer noopener" className="dez-page">
             FAQ
