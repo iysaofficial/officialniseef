@@ -89,6 +89,53 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="#">
+            Kurasi <i className="fa fa-chevron-down"></i>{' '}
+          </Link>
+          <ul className="sub-menu left">
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1uQlDcr7_2sWDcj2Paa81ypdVa2WPEB57?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Kurasi 2025
+              </a>
+            </li>
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2023
+              </a>
+            </li> */}
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2022
+              </a>
+            </li> */}
+            {/* <li>
+              <a
+                href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2021
+              </a>
+            </li> */}
+          </ul>
+        </li>
+        <li>
+          <Link href="#">
             Gallery<i className="fa fa-chevron-down"></i>{' '}
           </Link>
           <ul className="sub-menu left">
