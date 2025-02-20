@@ -15,14 +15,14 @@ const kategori = () => {
           className="dlab-bnr-inr dlab-bnr-inr-sm overlay-primary bg-pt"
           style={{ backgroundImage: "url(" + bnr1 + ")" }}
         >
-          <PageTitle motherMenu="List of Winners" activeMenu="List of Winner" />
+          <PageTitle motherMenu="Daftar Pemenang" activeMenu="Daftar Pemenang Tahun 2025" />
         </div>
         {/* <!-- inner page banner END --> */}
 
         <div class="container page">
           <div className="text-center">
             <h3>
-              Choose based on the Category of the event you are participating in
+              Pilih berdasarkan Kategori acara yang Anda ikuti
             </h3>
           </div>
           <div className=" wrapper-btn text-center">
@@ -48,7 +48,7 @@ const kategori = () => {
                 NISEEF OFFLINE{" "}
               </a>
             </Link>
-            {/* <Link href="/LoW/2025/online2025" legacyBehavior>
+            <Link href="/LoW/2025/online2025" legacyBehavior>
               <a
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
@@ -56,7 +56,7 @@ const kategori = () => {
                 {" "}
                 NISEEF ONLINE{" "}
               </a>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

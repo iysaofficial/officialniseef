@@ -11,17 +11,7 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="/LoW/lowtahun">
-            List Of Winners
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="dez-page"
-          >
-            Guide Book
+            Daftar Pemenang
           </Link>
         </li>
         <li>
@@ -42,7 +32,7 @@ const HeaderMenu = () => {
         </li> */}
         <li>
           <Link href="#">
-            Press Release <i className="fa fa-chevron-down"></i>{' '}
+            Liputan Media <i className="fa fa-chevron-down"></i>{' '}
           </Link>
           <ul className="sub-menu left">
             <li>
@@ -52,39 +42,9 @@ const HeaderMenu = () => {
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Press Release 2025
+                Pesan Siaran 2025
               </a>
             </li>
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2023
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2022
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2021
-              </a>
-            </li> */}
           </ul>
         </li>
         <li>
@@ -136,7 +96,7 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="#">
-            Gallery<i className="fa fa-chevron-down"></i>{' '}
+            Galeri<i className="fa fa-chevron-down"></i>{' '}
           </Link>
           <ul className="sub-menu left">
             <li>
@@ -146,39 +106,9 @@ const HeaderMenu = () => {
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Gallery 2025
+                Galeri 2025
               </a>
             </li>
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2023
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2022
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2021
-              </a>
-            </li> */}
           </ul>
         </li>
         <li>

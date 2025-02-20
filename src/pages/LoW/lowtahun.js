@@ -16,13 +16,13 @@ const lowtahun = () => {
           className="dlab-bnr-inr dlab-bnr-inr-sm overlay-primary bg-pt"
           style={{ backgroundImage: "url(" + bnr1 + ")" }}
         >
-          <PageTitle motherMenu="List of Winners" activeMenu="List of Winner" />
+          <PageTitle motherMenu="Daftar Pemenang" activeMenu="Daftar Pemenang Setiap Tahun" />
         </div>
         {/* <!-- inner page banner END --> */}
 
         <div class="container page">
           <div className="text-center">
-            <h3>Select by the year of the event you are participating in</h3>
+            <h3>Pilih berdasarkan tahun event yang di ikuti </h3>
           </div>
           <div className=" wrapper-btn text-center">
           <Link href="/LoW/2025/kategori" legacyBehavior>
@@ -34,42 +34,6 @@ const lowtahun = () => {
                 2025{" "}
               </a>
             </Link>
-            {/* <Link href="/LoW/2024/kategori" legacyBehavior>
-              <a
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2024{" "}
-              </a>
-            </Link> */}
-
-            {/* <Link
-              href="https://drive.google.com/file/d/1yDfiFMAUrV8GKDapO9iwGMsm6dRnLWB5/view?usp=sharing"
-              legacyBehavior
-            >
-              <a
-                target="_blank"
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2023{" "}
-              </a>
-            </Link> */}
-            {/* <Link
-              href="https://drive.google.com/file/d/1qXpDh4KdiyINGBL7nQFxZNFIa9OL-7k0/view?usp=sharing"
-              legacyBehavior
-            >
-              <a
-                target="_blank"
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2022{" "}
-              </a>
-            </Link> */}
           </div>
         </div>
       </div>

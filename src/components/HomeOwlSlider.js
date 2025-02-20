@@ -103,7 +103,7 @@ const HomeOwlSlider = () => {
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
-                  GUIDE BOOK
+                  Buku Panduan
                 </a>
               </Link>
             </div>
@@ -141,7 +141,7 @@ const HomeOwlSlider = () => {
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
-                  GUIDE BOOK
+                  Buku Panduan
                 </a>
               </Link>
             </div>
@@ -179,7 +179,7 @@ const HomeOwlSlider = () => {
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
-                  GUIDE BOOK
+                  Buku Panduan
                 </a>
               </Link>
             </div>
