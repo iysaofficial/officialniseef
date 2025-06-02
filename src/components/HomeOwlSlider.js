@@ -89,6 +89,15 @@ const HomeOwlSlider = () => {
                 <br />
               </h2>
 
+                            <a
+                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="site-button m-r10 white button-lg"
+              >
+                After Movie
+              </a>
+
               <Link href="/" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
@@ -127,6 +136,15 @@ const HomeOwlSlider = () => {
                 <br />
               </h2>
 
+                                  <a
+                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="site-button m-r10 white button-lg"
+              >
+                After Movie
+              </a>
+
               <Link href="/" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
@@ -164,6 +182,16 @@ const HomeOwlSlider = () => {
                 <a>Segera Hadir</a>
                 <br />
               </h2>
+
+
+                                  <a
+                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="site-button m-r10 white button-lg"
+              >
+                After Movie
+              </a>
 
               <Link href="/" legacyBehavior>
                 <a
