@@ -133,11 +133,10 @@ text-transform: lowercase !important;
 /* PAGE HEADER END */
 /* PAGE HEADER END */
 
-
 /* HOMEREGIST START */
 /* HOMEREGIST START */
 .homeregist-section {
-  padding: 75px 25px 75px 25px  ;
+  /* padding: 75px 25px 75px 25px  ; */
   height: 100vh;
   background: var(--warna-tulisan2);
   display: flex;
@@ -149,10 +148,10 @@ text-transform: lowercase !important;
 /* HOMEREGIST END */
 /* HOMEREGIST END */
 
-/* REGISTRATION START */
+/* REGISTRATION START
 /* REGISTRATION START */
 .registration-section {
-padding: 10rem 25px 75px 25px  ;
+padding: 5rem 25px 75px 25px  ;
 background: var(--warna-tulisan2);
 background-size: cover;
 background-repeat: no-repeat;
@@ -177,12 +176,6 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 margin: 50px 0 20px 0;
-}
-
-.registration-section .content form .user-details p{
-  margin: 0;
-  color: var(--warna-tulisan);
-  font-size: 12px;
 }
 .registration-section form .user-details .input-box {
 margin-bottom: 30px;
@@ -211,7 +204,7 @@ outline: none;
 font-size: 16px;
 border-radius: 5px;
 padding-left: 15px;
-border: 1px solid var(--warna-primary);
+border: 1px solid var(--warna-primary) !important;
 border-bottom-width: 2px;
 transition: all 0.3s ease;
 }
@@ -223,7 +216,7 @@ outline: none;
 font-size: 16px;
 border-radius: 5px;
 padding-left: 15px;
-border: 1px solid var(--warna-primary);
+border: 1px solid var(--warna-primary) !important;
 border-bottom-width: 2px;
 transition: all 0.3s ease;
 }
@@ -254,7 +247,7 @@ outline: none;
 font-size: 16px;
 border-radius: 5px;
 padding-left: 15px;
-border: 1px solid var(--warna-primary);
+border: 1px solid var(--warna-primary) !important;
 border-bottom-width: 2px;
 transition: all 0.3s ease;
 }
@@ -323,16 +316,17 @@ display: none;
 
 .registration-section form .button input:hover{
   box-shadow: 12px 12px #262521;
-  background-color: var(--warna-sekunder) !important;
+  background-color: var(--warna-tulisan) !important;
   border-color: #262521;
   transition: .3s;
 }
 .registration-section form .buttonindo input:hover{
   box-shadow: 12px 12px #262521;
-  background-color: var(--warna-sekunder) !important;
+  background-color: var(--warna-tulisan) !important;
   border-color: #262521;
   transition: .3s;
 }
+
 
 
 @media (max-width: 426px) {
@@ -360,41 +354,13 @@ display: none;
 /* REGISTRATION END */
 /* REGISTRATION END */
 
-.sticky-header {
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  transition: background-color 0.3s ease-in-out;
-}
 
-.sticky-header.scrolled {
-  background-color: rgba(0, 0, 0, 0.8); /* Hitam dengan opacity 0.8 */
-  top: 0px;
-}
 
-.customLightboxOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* Black background with opacity */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.customLightboxContent {
-  position: relative;
-  max-width: 100%;
-  max-height: 100%;
-}
 
 /* TERM & CONDITION START */
 /* TERM & CONDITION START */
 
 .modal-overlay {
-  margin-top: 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -431,7 +397,6 @@ display: none;
 }
 
 .modal-actions {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -443,3 +408,195 @@ input[type="checkbox"] {
 
 /* TERM & CONDITION END */
 /* TERM & CONDITION END */
+
+
+/* LOADER START */
+/* LOADER START */
+
+/* Overlay untuk blur */
+.overlay-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+/* Animasi loader */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+/* Keyframes untuk animasi spin */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pesan sukses atau error */
+.status-message {
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* LOADER END */
+/* LOADER END */
+
+/* Overlay untuk modal */
+.modal-overlay-submit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Efek transparan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Kontainer modal */
+.modal-submit {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  /* height: 50%; */
+  max-width: 600px;
+  text-align: justify;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Judul modal */
+.modal-submit h2 {
+  color: #d9534f; /* Warna merah untuk peringatan */
+  margin-bottom: 10px;
+}
+
+/* Paragraf di modal */
+.modal-submit p {
+  font-size: clamp(12px, 2vw, 16px);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.modal-submit b {
+  /* font-size: 18px; */
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Tombol modal */
+.modal-buttons-submit {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tombol kembali */
+.modal-buttons-submit button:first-child {
+  background: #ccc;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+/* Tombol lanjutkan */
+.modal-buttons-submit button:last-child {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+/* Hover efek */
+.modal-buttons-submit button:hover {
+  opacity: 0.8;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+
+/* THANKYOU START */
+/* THANKYOU START */
+.thankyou {
+  text-align: center;
+  padding: 20px;
+}
+.thankyou-table {
+  margin: 20px auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+.thankyou-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.thankyou-table td:first-child {
+  font-weight: bold;
+  background: #f4f4f4;
+}
+
+.thankyou {
+  height: 100vh;
+  background: var(--warna-tulisan2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--warna-tulisan) !important;
+  text-align: center;
+}
+@media (max-width: 426px) {
+  .thankyou {
+    height: 150vh;
+  }
+}
+
+/* THANKYOU END */
+/* THANKYOU END */
+
+/* LOW START */
+/* LOW STAT */
+.low-section{
+  padding: 100px 0px 100px 0px;
+  align-content: center;
+}
+/* LOW END */
+/* LOW END */
