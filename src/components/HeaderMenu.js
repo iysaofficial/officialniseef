@@ -10,31 +10,20 @@ const HeaderMenu = () => {
           </Link>
         </li>
         <li>
-          <Link href="/LoW/lowtahun">
-            Daftar Pemenang
-          </Link>
+          <Link href="/LoW/lowtahun">Daftar Pemenang</Link>
         </li>
-        <li>
-          <Link
-            href="https://drive.google.com/drive/folders/1ircNMSRvFbZS3L2SEG-xtW79uLZd3QwI?usp=sharing"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="dez-page"
-          >
-            Sertifikat Supervisor 2025
-          </Link>
-        </li>
-
-        {/* <li>
-          <Link href="/LoW/lowtahun">
-            List Of Winners
-          </Link>
-        </li> */}
         <li>
           <Link href="#">
-            Liputan Media <i className="fa fa-chevron-down"></i>{' '}
+            Liputan Media <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
+            <li>
+              <Link href="/NewsPage/PageNews" legacyBehavior>
+                <a rel="noreferrer noopener" className="dez-page">
+                  Berita dari Media
+                </a>
+              </Link>
+            </li>
             <li>
               <a
                 href="https://drive.google.com/file/d/1kSuGCVFkieMQPlqMEWeIijz1Pqa1g5GJ/view?usp=sharing"
@@ -49,7 +38,7 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="#">
-            Kurasi <i className="fa fa-chevron-down"></i>{' '}
+            Kurasi <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
             <li>
@@ -62,41 +51,11 @@ const HeaderMenu = () => {
                 Kurasi 2025
               </a>
             </li>
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1z0Iabx2X9TJ3tNm5ejm2ALEDykX0_Aip?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2023
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1yYtOcWtTBfM1ICxLSjKWtb0VdcyK4trk?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2022
-              </a>
-            </li> */}
-            {/* <li>
-              <a
-                href="https://drive.google.com/drive/folders/1cBMZXryRSq5QrVDx3B0_UqU_QaKVvdMR?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="dez-page"
-              >
-                Curation 2021
-              </a>
-            </li> */}
           </ul>
         </li>
         <li>
           <Link href="#">
-            Galeri<i className="fa fa-chevron-down"></i>{' '}
+            Galeri<i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
             <li>
@@ -107,6 +66,23 @@ const HeaderMenu = () => {
                 className="dez-page"
               >
                 Galeri 2025
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link href="#">
+            Sertifikat<i className="fa fa-chevron-down"></i>{" "}
+          </Link>
+          <ul className="sub-menu left">
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/1ircNMSRvFbZS3L2SEG-xtW79uLZd3QwI?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Sertifikat Supervisor 2025
               </a>
             </li>
           </ul>

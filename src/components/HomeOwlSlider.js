@@ -89,7 +89,7 @@ const HomeOwlSlider = () => {
                 <br />
               </h2>
 
-                            <a
+              <a
                 href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
                 rel="noreferrer noopener"
                 target="_blank"
@@ -98,21 +98,24 @@ const HomeOwlSlider = () => {
                 After Movie
               </a>
 
-              <Link href="/" legacyBehavior>
-                <a
-                  rel="noreferrer noopener"
-                  className="site-button m-r10 white button-lg"
-                >
-                  Segera Hadir
-                </a>
-              </Link>
-              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
+              <Link
+                href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
+                legacyBehavior
+              >
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
                   Buku Panduan
+                </a>
+              </Link>
+              <Link href="/" legacyBehavior>
+                <a
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Segera Hadir
                 </a>
               </Link>
             </div>
@@ -136,7 +139,7 @@ const HomeOwlSlider = () => {
                 <br />
               </h2>
 
-                                  <a
+              <a
                 href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
                 rel="noreferrer noopener"
                 target="_blank"
@@ -145,21 +148,24 @@ const HomeOwlSlider = () => {
                 After Movie
               </a>
 
-              <Link href="/" legacyBehavior>
-                <a
-                  rel="noreferrer noopener"
-                  className="site-button m-r10 white button-lg"
-                >
-                  Segera Hadir
-                </a>
-              </Link>
-              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
+              <Link
+                href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
+                legacyBehavior
+              >
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
                   Buku Panduan
+                </a>
+              </Link>
+              <Link href="/" legacyBehavior>
+                <a
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Segera Hadir
                 </a>
               </Link>
             </div>
@@ -182,9 +188,7 @@ const HomeOwlSlider = () => {
                 <a>Segera Hadir</a>
                 <br />
               </h2>
-
-
-                                  <a
+              <a
                 href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
                 rel="noreferrer noopener"
                 target="_blank"
@@ -192,22 +196,24 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-
-              <Link href="/" legacyBehavior>
-                <a
-                  rel="noreferrer noopener"
-                  className="site-button m-r10 white button-lg"
-                >
-                  Segera Hadir
-                </a>
-              </Link>
-              <Link href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing" legacyBehavior> 
+              <Link
+                href="https://drive.google.com/file/d/1a8sTUM0plBNMsq8BkNGA00_MARh_r5Fi/view?usp=sharing"
+                legacyBehavior
+              >
                 <a
                   rel="noreferrer noopener"
                   target="_blank"
                   className="site-button m-r10 white button-lg"
                 >
                   Buku Panduan
+                </a>
+              </Link>
+              <Link href="/" legacyBehavior>
+                <a
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Segera Hadir
                 </a>
               </Link>
             </div>

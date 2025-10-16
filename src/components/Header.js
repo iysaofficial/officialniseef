@@ -75,10 +75,6 @@ const Header = () => {
                   +62 882-1324-8890
                 </li>
                 <li>
-                  <i className="fas fa-phone-alt m-r5"></i>
-                  +62 817-7091-4129
-                </li>
-                <li>
                   <i className="fas fa-map-marker-alt m-r5"></i>
                   Jl. Kemang RT 03 RW 06 Kp. Kekupu
                 </li>
