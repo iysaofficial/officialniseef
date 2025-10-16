@@ -210,8 +210,8 @@ function IndonesiaOffline() {
                       {isLoading
                         ? "Mengirim..."
                         : canClick
-                        ? "Lanjutkan"
-                        : `Tunggu... ${countdown}`}
+                          ? "Lanjutkan"
+                          : `Tunggu... ${countdown}`}
                     </button>
                   </div>
                 </div>
@@ -561,7 +561,7 @@ function IndonesiaOffline() {
                     <option value="Environment Science">Environment Science</option>
                     <option value="Inovation Science">Inovation Science</option>
                     <option value="Industrial Application">Industrial Application</option>
-                    <option value="Mathematics">Mathematics</option>
+                    <option value="Informatics, Robotic and Artificial Intelegence (AI)">Informatics, Robotic and Artificial Intelegence (AI)</option>
                     <option value="Life Science">Life Science</option>
                     <option value="Physics, Energy and Engineering">Physics, Energy and Engineering</option>
                   </select>
