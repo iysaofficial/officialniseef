@@ -1,22 +1,38 @@
+"use client";
+import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-
-import { Inter } from "next/font/google";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-const inter = Inter({ subsets: ["latin"] });
-
-function IndoensiaParticipants() {
+function IndonesiaOnline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
   const maxNameChars = 180; // batasan maksimal karakter
   const [selectedMaxProject, setselectedMaxProject] = useState("");
+  const [selectedNamaSekolah, setselectedNamaSekolah] = useState("");
+  const maxSchoolChars = 500; // batasan maksimal karakter
   const maxProjectChars = 160; // batasan maksimal karakter
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [categoryPrice, setCategoryPrice] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const [canClick, setCanClick] = useState(false);
+  const router = useRouter();
 
   const handleInputNameChange = (e) => {
     const { value } = e.target;
     if (value.length <= maxNameChars) {
       setselectedMaxNamaLengkap(value);
+    }
+  };
+
+  const handleInputNameSchoolChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxSchoolChars) {
+      setselectedNamaSekolah(value);
     }
   };
 
@@ -27,50 +43,117 @@ function IndoensiaParticipants() {
     }
   };
 
-  useEffect(() => {
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxsQZr2eSQL9NwJ4vONUtxdwMeLRT8Fx9xljvDew6vaqChf6HjnHKqjpoPjzQzKHbtn/exec";
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setSelectedCategory(value);
 
+    // Logika untuk menentukan harga berdasarkan kategori yang dipilih
+    switch (value) {
+      case "National Innovative Science Environmental and Entrepreneur Fair - Online Competition":
+        setCategoryPrice("RP 1.150.000");
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    const termsAccepted = sessionStorage.getItem("termsAccepted");
+    if (!termsAccepted) {
+      alert("Anda harus menyetujui Syarat & Ketentuan terlebih dahulu.");
+      router.push("/registration/homeindo");// Navigasi ke halaman HomeIndo
+    }
+  }, [router]);
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwubal8RsOQkuQ_hkcnlksfQMRG8XNdC3MuUz2YQYGwKToSwmLvXcamgQVnRCMpfQd2HQ/exec";
+
+  useEffect(() => {
     const form = document.forms["regist-form"];
-    var buttonCounter = 0;
 
     if (form) {
       const handleSubmit = async (e) => {
         e.preventDefault();
-        if (buttonCounter == 0) {
-          try {
-            buttonCounter++;
-            await fetch(scriptURL, {
-              method: "POST",
-              body: new FormData(form),
-            });
-            // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
-            window.location.href = "/registration/homeregist"; // Gantikan dengan URL halaman sukses Anda
-          } catch (error) {
-            console.error("Error saat mengirim data:", error);
-            // Handle error jika diperlukan
+        setShowModal(true);
+        setCanClick(false);
+        setCountdown(5); // Set ulang countdown saat modal muncul
+
+        let count = 5;
+        const interval = setInterval(() => {
+          count -= 1;
+          setCountdown(count);
+
+          if (count <= 1) {
+            clearInterval(interval); // Hentikan countdown di angka 1
+            setCanClick(true);
           }
-        }
-        form.reset();
+        }, 1000);
       };
 
       form.addEventListener("submit", handleSubmit);
-
-      // Membersihkan event listener saat komponen dilepas
       return () => {
         form.removeEventListener("submit", handleSubmit);
       };
     }
   }, []);
 
+  const handleConfirmSubmit = async () => {
+    setShowModal(false); // Tutup modal
+    const form = document.forms["regist-form"];
+
+    if (!form) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Data berhasil dikirim!");
+
+        // Ambil data sebelum reset
+        const formData = {
+          namaLengkap: selectedMaxNamaLengkap,
+          projectTitle: selectedMaxProject,
+          category: selectedCategory,
+          categoryPrice: categoryPrice,
+          namasekolah: selectedNamaSekolah,
+        };
+
+        form.reset();
+        setTimeout(() => {
+          router.push(
+            `/registration/thankyouindo?namaLengkap=${encodeURIComponent(
+              selectedMaxNamaLengkap
+            )}
+            &projectTitle=${encodeURIComponent(selectedMaxProject)}
+            &category=${encodeURIComponent(selectedCategory)}
+            &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+          );
+        }, 1000);
+      } else {
+        setStatusMessage("Terjadi kesalahan saat mengirim data.");
+      }
+    } catch (error) {
+      setStatusMessage("Terjadi kesalahan saat mengirim data.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
+      <Head>
+        <title>Indo Online | NISEEF</title>
+        <meta name="description" content="Halaman Registrasi NISEEF" />
+      </Head>
       <Header />
       {/* PAGE HEADER START */}
       <div className="page-header text-center">
         <div className="divider"></div>
         <h1>Formulir Pendaftaran</h1>
-        <Link href="/registration/homeregist" legacyBehavior>
+        <Link href="/registration/homeindo" legacyBehavior>
           <a>Halaman Sebelumnya</a>
         </Link>
       </div>
@@ -83,7 +166,7 @@ function IndoensiaParticipants() {
             <br />
             <br />
             <h4>
-              HALLO PESERTA NISEEF 2025, Mohon perhatikan informasi berikut ini
+              HALLO PESERTA NISEEF 2026, Mohon perhatikan informasi berikut ini
               sebelum mengisi formulir pendaftaran :
             </h4>
             <br />
@@ -107,8 +190,40 @@ function IndoensiaParticipants() {
             </p>
             <br />
 
+            {showModal && (
+              <div className="modal-overlay-submit">
+                <div className="modal-submit text-lg-center text-md-center">
+                  <h2 className="text-center">⚠️PERHATIAN!</h2>
+                  <p>
+                    Data yang sudah dikirim tidak dapat diubah kembali. Panitia
+                    akan menggunakan data terakhir yang masuk untuk pencetakan
+                    sertifikat.
+                    <br />
+                    <b>PASTIKAN SELURUH DATA SUDAH BENAR!</b>
+                    <br />
+                    <b>
+                      JANGAN MENDAFTAR ULANG DENGAN DATA YANG SAMA BERKALI-KALI!
+                    </b>
+                  </p>
+                  <div className="modal-buttons-submit">
+                    <button onClick={() => setShowModal(false)}>Kembali</button>
+                    <button
+                      onClick={handleConfirmSubmit}
+                      disabled={!canClick || isLoading}
+                    >
+                      {isLoading
+                        ? "Mengirim..."
+                        : canClick
+                          ? "Lanjutkan"
+                          : `Tunggu... ${countdown}`}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <form name="regist-form">
-              <h1>BIODATA</h1>
+              <h1 className="text-sm md:text-lg lg:text-5xl">BIODATA</h1>
               <h1 className="garis-bawah"></h1>
               <div className="user-details">
                 <div className="input-box">
@@ -135,14 +250,12 @@ function IndoensiaParticipants() {
                     name="CATEGORY_COMPETITION"
                     class="form-control"
                     placeholder="Choose Category Competition "
+                    onChange={handleCategoryChange}
                     required
                   >
                     <option value="">--Pilih Kategori Kompetisi--</option>
-                    <option value="Online Competition">
+                    <option value="National Innovative Science Environmental and Entrepreneur Fair - Online Competition">
                       Online Competition
-                    </option>
-                    <option value="Offline Competition">
-                      Offline Competition
                     </option>
                   </select>
                 </div>
@@ -159,9 +272,9 @@ function IndoensiaParticipants() {
                       diawal, dengan format seperti berikut :
                     </p>
                     <p>Note : maksimal 5 anggota + 1 ketua tim</p>
-                    <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
-                    <h6>Irsyad Zaidan</h6>
+                    <h6>Adrian Simatupang</h6>
+                    <h6>Pangeran Hasanudin</h6>
+                    <h6>Irsyad Zaidan Kusuma</h6>
                   </label>
                   <textarea
                     type="text"
@@ -216,7 +329,7 @@ function IndoensiaParticipants() {
                     id="LEADER_EMAIL"
                     name="LEADER_EMAIL"
                     class="form-control"
-                    placeholder="Input Your Leader Email Address"
+                    placeholder="Masukan Alamat Email ketua Tim"
                     required
                   />
                 </div>
@@ -246,7 +359,7 @@ function IndoensiaParticipants() {
 
               {/* DATA SEKOLAH START */}
               {/* DATA SEKOLAH START */}
-              <h1>DATA SEKOLAH</h1>
+              <h1 className="text-sm md:text-lg lg:text-5xl">DATA SEKOLAH</h1>
               <h1 className="garis-bawah"></h1>
               <div className="user-details">
                 <div className="input-box">
@@ -270,7 +383,12 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Masukan Nama Sekolah/Universitas Anda"
                     required
+                    value={selectedNamaSekolah}
+                    onChange={handleInputNameSchoolChange}
                   ></textarea>
+                  <p>
+                    {selectedNamaSekolah.length} / {maxSchoolChars} character
+                  </p>
                 </div>
                 <div className="input-box">
                   <label for="NPSN" className="form-label">
@@ -336,7 +454,9 @@ function IndoensiaParticipants() {
 
               {/* DATA PEMBIMBING START */}
               {/* DATA PEMBIMBING START */}
-              <h1>DATA PEMBIMBING</h1>
+              <h1 className="text-sm md:text-lg lg:text-5xl">
+                DATA PEMBIMBING
+              </h1>
               <h1 className="garis-bawah"></h1>
               <div className="user-details">
                 <div class="input-box">
@@ -396,7 +516,9 @@ function IndoensiaParticipants() {
               {/* DETAIL PROJECT START */}
               {/* DETAIL PROJECT START */}
               <div className="">
-                <h1>DETAIL PROYEK</h1>
+                <h1 className="text-sm md:text-lg lg:text-5xl">
+                  DETAIL PROYEK
+                </h1>
                 <h1 className="garis-bawah"></h1>
               </div>
               <div className="user-details">
@@ -424,35 +546,31 @@ function IndoensiaParticipants() {
                     {selectedMaxProject.length} / {maxProjectChars} character
                   </p>
                 </div>
+
+                {/* Dropdown Kategori */}
                 <div className="input-box">
-                  <label for="CATEGORIES" className="form-label">
+                  <label htmlFor="CATEGORIES" className="form-label">
                     Kategori
                   </label>
                   <select
-                    type="text"
                     id="CATEGORIES"
                     name="CATEGORIES"
                     className="form-control"
                     placeholder="--Choose-- "
                     required
                   >
-                    <option value="">--Choose Categories--</option>
+                    <option value="">--Pilih Kategori--</option>
                     <option value="Entrepreneur">Entrepreneur</option>
                     <option value="Social Science">Social Science</option>
-                    <option value="Environmental Science">
-                      Environmental Science
-                    </option>
-                    <option value="Innovation Science">
-                      Innovation Science
-                    </option>
-                    <option value="Cluster Mechanical and Shipping">
-                      Cluster Mechanical and Shipping
-                    </option>
-                    <option value="Industrial Application">
-                      Industrial Application
-                    </option>
+                    <option value="Environment Science">Environment Science</option>
+                    <option value="Inovation Science">Inovation Science</option>
+                    <option value="Industrial Application">Industrial Application</option>
+                    <option value="Informatics, Robotic and Artificial Intelegence (AI)">Informatics, Robotic and Artificial Intelegence (AI)</option>
+                    <option value="Life Science">Life Science</option>
+                    <option value="Physics, Energy and Engineering">Physics, Energy and Engineering</option>
                   </select>
                 </div>
+
                 <div className="input-box">
                   <label for="YES_NO" className="form-label">
                     Apakah judul proyek pernah berpartisipasi dalam kompetisi
@@ -489,6 +607,21 @@ function IndoensiaParticipants() {
                   ></textarea>
                   <div className="mt-5" id="form_alerts"></div>
                 </div>
+                {/* Kolom Harga */}
+                <div className="input-box invisible">
+                  <label htmlFor="CATEGORY_PRICE" className="form-label ">
+                    Harga Pendaftaran
+                  </label>
+                  <input
+                    type="text"
+                    id="CATEGORY_PRICE"
+                    name="CATEGORY_PRICE"
+                    className="form-control"
+                    value={categoryPrice}
+                    readOnly
+                    placeholder="Harga akan muncul berdasarkan kategori yang dipilih"
+                  />
+                </div>
               </div>
               {/* DETAIL PROJECT END */}
               {/* DETAIL PROJECT END */}
@@ -496,7 +629,9 @@ function IndoensiaParticipants() {
               {/* GENERAL INFORMATION START */}
               {/* GENERAL INFORMATION START */}
               <div className="">
-                <h1>INFORMASI UMUM</h1>
+                <h1 className="text-sm md:text-lg lg:text-5xl">
+                  INFORMASI UMUM
+                </h1>
                 <h1 className="garis-bawah"></h1>
               </div>
               <div className="user-details">
@@ -521,7 +656,7 @@ function IndoensiaParticipants() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    Sumber Informasi Kompetisi NISEEF 2025
+                    Sumber Informasi Kompetisi NISEEF 2026
                   </label>
                   <select
                     type="text"
@@ -532,15 +667,15 @@ function IndoensiaParticipants() {
                     required
                   >
                     <option value="">--Pilih Sumber Informasi--</option>
+                    <option value="NISEEF Website">NISEEF Website</option>
+                    <option value="IYSA Website">IYSA Website</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="NISEEF Instagram">NISEEF Instagram</option>
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
-                    <option value="IYSA FaceBook">IYSA FaceBook</option>
+                    <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
-                    <option value="IYSA Website">IYSA Website</option>
-                    <option value="NISEEF Website">NISEEF Website</option>
                     <option value="IYSA Email">IYSA Email</option>
                     <option value="NISEEF Email">NISEEF Email</option>
                     <option value="Acara Sebelumnya">Acara Sebelumnya</option>
@@ -569,6 +704,18 @@ function IndoensiaParticipants() {
                 <input type="submit" value="KIRIM" />
               </div>
             </form>
+
+            {/* Loader dan Status Message */}
+            {isLoading && (
+              <div className="overlay-loader">
+                <div className="loader"></div>
+                <div>
+                  {statusMessage && (
+                    <p className="status-message">{statusMessage}</p>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -577,4 +724,4 @@ function IndoensiaParticipants() {
   );
 }
 
-export default IndoensiaParticipants;
+export default IndonesiaOnline;

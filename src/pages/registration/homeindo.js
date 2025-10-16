@@ -1,15 +1,15 @@
-import Header from "@/components/Header";
+import Navigation from "@/components/Header";
 import Footer from "@/components/Footer";
+import { indonesiaOnlineTerms, indonesiaOfflineTerms } from "@/data/terms";
 import Link from "next/link";
-import { useState } from "react";
-import { indonesiaTerms } from "@/data/terms";
 
-function HomeRegist() {
+import { useState, useEffect } from "react";
+
+function HomeIndo() {
   const [showModal, setShowModal] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [redirectLink, setRedirectLink] = useState("");
   const [termsContent, setTermsContent] = useState("");
-
   const handleOpenModal = (link, terms) => {
     setRedirectLink(link); // Set link tujuan redirect
     setTermsContent(terms); // Set isi terms sesuai pilihan
@@ -18,23 +18,30 @@ function HomeRegist() {
 
   const handleAccept = () => {
     if (termsAccepted) {
+      sessionStorage.setItem("termsAccepted", "true"); // Menyimpan status setuju di sessionStorage
       setShowModal(false);
-      setTermsAccepted(false); // Reset checkbox untuk penggunaan berikutnya
-      window.location.href = redirectLink; // Redirect ke halaman
+      window.location.href = redirectLink;
     } else {
-      alert("Please agree to the Terms & Conditions to proceed.");
+      alert("Harap setujui Syarat & Ketentuan untuk melanjutkan.");
     }
   };
 
+  useEffect(() => {
+    const hasAcceptedTerms = sessionStorage.getItem("termsAccepted");
+    if (hasAcceptedTerms === "true") {
+      setTermsAccepted(true); // Set status sudah diterima
+    }
+  }, []);
+
   return (
     <>
-      <Header />
+      <Navigation />
       {/* PAGE HEADER START */}
       <div className="page-header text-center">
         <div className="divider"></div>
-        <h1>Pendaftaran</h1>
+        <h1>Registrasi</h1>
         <Link href="/" legacyBehavior>
-          <a>Utama</a>
+          <a>Halaman Sebelumnya</a>
         </Link>
       </div>
       {/* PAGE HEADER END */}
@@ -42,25 +49,37 @@ function HomeRegist() {
         <div>
           <div className="wrapper">
             <div className="text-center">
-              <h1 className="mx-auto">FORMULIR PENDAFTARAN</h1>
-              <h3 className="mx-auto mt-5 mb-2">
-                Pilih Kategori Peserta untuk Pendaftaran NISEEF 2025
+              <h1 className="mx-auto mb-2 text-sm md:text-lg lg:text-5xl">
+                FORMULIR PENDAFTARAN UNTUK PESERTA INDONESIA
+              </h1>
+              <h3 className="mx-auto mt-2 mb-2 text-sm md:text-lg lg:text-2xl">
+                Pilih Kategori Kompetisi untuk Pendaftaran NISEEF 2026
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <button
-              className="btn btn-custom text-center me-lg-5 m-2"
+            <a
+              className="btn btn-custom text-center me-lg-5 "
               onClick={() =>
                 handleOpenModal(
-                  "/registration/indonesiaparticipants",
-                  indonesiaTerms
+                  "/registration/indo-online",
+                  indonesiaOnlineTerms
                 )
               }
             >
-              Peserta Indonesia{" "}
-              <i className="fa-solid fa-earth-americas"></i>
-            </button>
+              Kompetisi Online<i className="fa-solid fa-earth-americas"></i>
+            </a>
+            <a
+              className="btn btn-custom text-center me-lg-5 "
+              onClick={() =>
+                handleOpenModal(
+                  "/registration/indo-offline",
+                  indonesiaOfflineTerms
+                )
+              }
+            >
+              Kompetisi Offlinea<i className="fa-solid fa-earth-americas"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -69,35 +88,34 @@ function HomeRegist() {
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h2>Terms & Conditions</h2>
+            <h2 className="text-4xl">Syarat & Ketentuan</h2>
             <div>{termsContent}</div> {/* Isi dinamis */}
-            <div className="checkbox">
+            <div className="checkbox mt-2">
               <input
                 type="checkbox"
                 id="terms"
                 checked={termsAccepted}
                 onChange={(e) => setTermsAccepted(e.target.checked)}
               />
-              <label htmlFor="terms"> I agree to the Terms & Conditions</label>
+              <label htmlFor="terms">Saya menyetujui Syarat & Ketentuan di atas</label>
             </div>
             <div className="modal-actions">
               <button
                 className="btn btn-secondary"
                 onClick={() => setShowModal(false)}
               >
-                Cancel
+                Kembali
               </button>
               <button className="btn btn-primary" onClick={handleAccept}>
-                Accept & Proceed
+                Terima & Lanjutkan
               </button>
             </div>
           </div>
         </div>
       )}
-
       <Footer />
     </>
   );
 }
 
-export default HomeRegist;
+export default HomeIndo;
